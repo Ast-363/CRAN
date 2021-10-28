@@ -40,7 +40,7 @@ First, you need to specify variables in "./opt/option.py"
 - results: inference results will be saved on this folder
 
 After those settings, you can run the inference code by running "inference.py"
-- python3 inference.py (execution code)
+- python3 inference.py --gpu_id 0 (execution code)
 
 # Acknolwdgements
 We refer to repos below to implement this code.
