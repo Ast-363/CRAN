@@ -25,9 +25,9 @@ Second, you need to download the DF2K dataset.
 - After merging the datasets (DIV2K & Flickr2K), the DF2K dataset should be composed as below
 
 DF2K
-  L DF2K_HR
-  L DF2K_LR_bicubic
-  L DF2K_LR_unknown
+- DF2K_HR
+- DF2K_LR_bicubic
+- DF2K_LR_unknown
 
 - set the database path in "train.py" (It is represented as "db_path" in "train.py")
 
