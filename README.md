@@ -23,13 +23,8 @@ Second, you need to download the DF2K dataset.
 - DIV2K download link: https://data.vision.ee.ethz.ch/cvl/DIV2K/ 
 - Flickr2K download link: https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar 
 - After merging the datasets (DIV2K & Flickr2K), the DF2K dataset should be composed as below
-
-DF2K
-- DF2K_HR
-- DF2K_LR_bicubic
-- DF2K_LR_unknown
-
-- set the database path in "train.py" (It is represented as "db_path" in "train.py")
+![캡처](https://user-images.githubusercontent.com/77471764/139165671-b12c5b6d-3f12-4564-bdf1-83c86f688a29.PNG)
+- After those settings, set the database path in "./opt/option.py" (It is represented as "dir_data")
 
 
 After those settings, you can run the train & validation code by running "train.py"
