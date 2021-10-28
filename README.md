@@ -34,14 +34,15 @@ After those settings, you can run the train code by running "train.py"
 - Options are all included in "./opt/option.py". So you should change the variable in "./opt/option.py"
 
 # Inference
-First, you need to specify variables in "inference.py"
-- dirname: root folder of test images
-- checkpoint: checkpoint file (trained on KonIQ-10k dataset)
-- result_score_txt: inference score will be saved on this txt file
-![image](https://user-images.githubusercontent.com/77471764/138195041-3176224f-6ab6-42b1-aa61-f9ec8a1ffa96.png)
+First, you need to specify variables in "./opt/option.py"
+- dir_test: root folder of test images
+- weights: checkpoint file (trained on DF2K dataset)
+- results: inference results will be saved on this folder
 
 After those settings, you can run the inference code by running "inference.py"
 - python3 inference.py (execution code)
 
 # Acknolwdgements
-We refer to the following website to implement the transformer (https://paul-hyun.github.io/transformer-01/)
+We refer to repos below to implement this code.
+- official RCAN github (https://github.com/yulunzhang/RCAN)
+- official Context-Gated Convolution github (https://github.com/XudongLinthu/context-gated-convolution)
