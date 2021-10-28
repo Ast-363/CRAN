@@ -13,7 +13,7 @@ The environmental settings are described below. (I cannot gaurantee if it works 
 - cv2=4.2.0
 - tqdm=4.45.0
 
-# Train & Validation
+# Train
 First, you need to download weights of ResNet50 pretrained on ImageNet database.
 - Downlod the weights from this website (https://download.pytorch.org/models/resnet50-0676ba61.pth)
 - rename the .pth file as "resnet50.pth" and put it in the "model" folder
@@ -23,19 +23,15 @@ Second, you need to download the DF2K dataset.
 - DIV2K download link: https://data.vision.ee.ethz.ch/cvl/DIV2K/ 
 - Flickr2K download link: https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar 
 - After merging the datasets (DIV2K & Flickr2K), the DF2K dataset should be composed as below
+
 ![캡처](https://user-images.githubusercontent.com/77471764/139165671-b12c5b6d-3f12-4564-bdf1-83c86f688a29.PNG)
-- After those settings, set the database path in "./opt/option.py" (It is represented as "dir_data")
 
+- Set the database path in "./opt/option.py" (It is represented as "dir_data")
 
-After those settings, you can run the train & validation code by running "train.py"
-- python3 train.py (execution code)
+After those settings, you can run the train code by running "train.py"
+- python3 train.py --gpu_id 0 (execution code)
 - This code works on single GPU. If you want to train this code in muti-gpu, you need to change this code
-- Options are all included in "train.py". So you should change the variable "config" in "train.py"
-![image](https://user-images.githubusercontent.com/77471764/138195607-cf7165a1-dd64-4031-b1ab-872012f7046a.png)
-
-Belows are the validation performance on KonIQ-10k database (I'm still training the code, so the results will be updated later)
-- SRCC: 0.9023 / PLCC: 0.9232 (after training 105 epochs)
-- If the codes are implemented exactly the same as the paper, the performance can be further improved
+- Options are all included in "./opt/option.py". So you should change the variable in "./opt/option.py"
 
 # Inference
 First, you need to specify variables in "inference.py"
